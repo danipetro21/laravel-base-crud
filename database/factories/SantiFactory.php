@@ -19,9 +19,9 @@ class SantiFactory extends Factory
     {
         return [
             'name' => fake() -> firstName(),
-            'birdPlace' => fake() -> lastName(),
+            'birdPlace' => fake() -> city(),
             'blessingDate' => fake() -> date(),
-            'miracleCount' => fake() -> numberBetween(1, 99),
+            'miracleCount' => fake() -> numberBetween(5, 1000),
         ];
     }
 }

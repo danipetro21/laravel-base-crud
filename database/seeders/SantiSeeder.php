@@ -16,6 +16,6 @@ class SantiSeeder extends Seeder
      */
     public function run()
     {
-        Santi::factory() -> count(200) -> create();
+        Santi::factory() -> count(50) -> create();
     }
 }
