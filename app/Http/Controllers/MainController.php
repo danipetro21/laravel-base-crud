@@ -21,14 +21,9 @@ class MainController extends Controller
     //--- SHOW
 
     public function saintShow(Santi $saint){
-
+ 
+        return view('pages.saintShow', compact('saint'));
         
-
-        $data = [
-            'saint' => $saint
-        ];
-
-        return view('pages.saintShow', $data);
     }
 
     //--- DELETE
