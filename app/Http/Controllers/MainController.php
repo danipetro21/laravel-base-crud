@@ -43,7 +43,19 @@ class MainController extends Controller
         return view('pages.saintCreate');
     }
     public function saintStore(Request $request){
-        $data = $request->all();
+
+
+        // $data = $request->all();
+        //validate
+        $data = $request -> validate([
+            'name' => 'required|string|max:32',
+            'birthPlace' => 'required|string|max:32',
+            'blessingDate' => 'required|date',
+            'miracleCount' => 'required|integer|min:0'
+
+        ]);
+
+        
         $saint = new Santi();
         $saint -> name = $data['name'];
         $saint -> birdPlace = $data['birthPlace'];

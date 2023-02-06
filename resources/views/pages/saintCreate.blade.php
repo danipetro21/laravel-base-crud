@@ -1,8 +1,10 @@
 @extends('layouts.base')
 
 @section('content')
+    <h1>CREATE A NEW SAINT</h1>
 
-<h1>CREATE A NEW SAINT</h1>
+    @include('components.errors')
+
     <form action="{{ route('saint.store') }}" method="POST">
         @csrf
         <label for="name">Name</label>
@@ -22,8 +24,7 @@
         <br>
         <br>
         <input type="submit" value="CREATE NEW SAINT">
-        
-        
+
+
     </form>
-    
 @endsection
