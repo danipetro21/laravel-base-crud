@@ -30,3 +30,8 @@ Route :: get('/saint/create', [MainController :: class, 'saintCreate'])
     // ---- ROUTE
     Route :: post('/saint/store', [MainController :: class, 'saintStore'])
     -> name('saint.store');
+// --- EDIT
+route :: get ('/saint/edit/{saint}', [MainController :: class, 'saintEdit'])
+    -> name('saint.edit');
+    route :: post('/saint/update/{saint}' , [MainController :: class, 'saintUpdate'])
+        -> name('saint.update');

@@ -14,7 +14,9 @@
                     {{ $saint -> name }} - {{ $saint -> miracleCount }}
                     
                 </a>
-
+                
+                <a href="{{ route('saint.edit', $saint) }}"> - E</a>
+                
                 <a href="{{ route('saint.delete', $saint) }}"> - X</a>
 
             </li>

@@ -23,7 +23,7 @@ class MainController extends Controller
     public function saintShow(Santi $saint){
  
         return view('pages.saintShow', compact('saint'));
-        
+
     }
 
     //--- DELETE
@@ -53,4 +53,29 @@ class MainController extends Controller
         $saint -> save();
         return redirect() -> route('home');
     }
+
+    //--- UPDATE 
+
+    public function saintEdit(Santi $saint){
+
+        $data = [
+            'saint' => $saint
+        ];
+
+        return view('pages.saintEdit', $data);
+    }
+
+    public function saintUpdate(Request $request, Santi $saint){
+
+        $data = $request->all();
+        $saint -> name = $data['name'];
+        $saint -> birdPlace = $data['birthPlace'];
+        $saint -> blessingDate = $data['blessingDate'];
+        $saint -> miracleCount = $data['miracleCount'];
+
+        $saint -> save();
+        return redirect() -> route('home');
+
+    }
+
 }
