@@ -9,13 +9,13 @@
         
             <li>
 
-                <a href="{{ route('saint.show', ['id' => $saint -> id]) }}">
+                <a href="{{ route('saint.show', $saint) }}">
 
                     {{ $saint -> name }} - {{ $saint -> miracleCount }}
                     
                 </a>
 
-                <a href="{{ route('saint.delete', ['id' => $saint -> id]) }}"> - X</a>
+                <a href="{{ route('saint.delete', $saint) }}"> - X</a>
 
             </li>
 

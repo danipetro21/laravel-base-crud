@@ -20,9 +20,9 @@ class MainController extends Controller
 
     //--- SHOW
 
-    public function saintShow($id){
+    public function saintShow(Santi $saint){
 
-        $saint = Santi::find($id); 
+        
 
         $data = [
             'saint' => $saint
@@ -33,9 +33,9 @@ class MainController extends Controller
 
     //--- DELETE
 
-    public function saintDelete($id){
+    public function saintDelete(Santi $saint){
         
-        $saint = Santi::find($id); 
+   
         $saint -> delete();
 
         return redirect() -> route('home');
